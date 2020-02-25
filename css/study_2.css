@@ -1,0 +1,56 @@
+/* STUDY 2 - Checkbox */
+#study_2 {
+    background-color: chocolate;
+    padding: 20px;
+    height: 100vh;
+}
+#study_2 label {
+    position: relative;
+}
+#study_2 .check {
+    display: none;
+}
+#study_2 .btn {
+    display: inline-block;
+    height: 60px;
+    width: 120px;
+    background-color: #333333;
+    border-radius: 50px;
+}
+#study_2 .btn::before {
+    content: "";
+    position: absolute;
+    z-index: 99;
+    height: 50px;
+    width: 50px;
+    background-color: #aaaaaa;
+    top: -40px;
+    left: 5px;
+    border-radius: 40px;
+    transition: all 0.5s ease;
+}
+#study_2 .btn::after {
+    content: "OFF";
+    position: absolute;
+    z-index: 98;
+    height: 50px;
+    width: 50px;
+    top: -38px;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    left: 65px;
+    color: #ffffff;
+    transition: all 0.5s ease-in-out;
+}
+#study_2 .check:checked + .btn {
+    background-color: #b1b1b1;
+}
+#study_2 .check:checked + .btn::before {
+    background-color: #0283fc;
+    left: 65px;
+}
+#study_2 .check:checked + .btn::after {
+    content: "ON";
+    left: 5px;
+}

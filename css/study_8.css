@@ -1,0 +1,71 @@
+#study_8 {
+    background-color: darkslategrey;
+    padding: 20px;
+    height: 100vh;
+}
+#study_8 .road {
+    position: relative;
+    width: 100%;
+    border-top: 10px dotted #ffffff;
+    top: 70px;
+}
+#study_8 .pacman {
+    position: absolute;
+    animation: walking 6s linear infinite;
+}
+#study_8 .pacman::before, #study_8 .pacman::after {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    position: absolute;
+    border: 30px solid #0798ca;
+    border-radius: 50%;
+    top: 35px;
+}
+#study_8 .pacman::before {
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    animation: pacTop 0.5s linear infinite alternate;
+}
+#study_8 .pacman::after {
+    border-right-color: transparent;
+    border-top-color: transparent;
+    animation: pacBottom 0.5s linear infinite alternate;
+}
+
+@keyframes walking {
+    0% {
+        left: 0%;
+        transform: scaleX(1);
+    }
+    49% {
+        left: 100%;
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(-1);
+    }
+    100% {
+        left: 0%;
+        transform: scaleX(-1);
+    }
+}
+
+@keyframes pacTop {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(40deg);
+    }
+}
+
+@keyframes pacBottom {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-40deg);
+    }
+}

@@ -1,0 +1,62 @@
+#study_7 {
+    background-color: coral;
+    padding: 20px;
+    height: 100vh;
+}
+#study_7 .spin {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    position: relative;
+    margin: 20px;
+    display: inline-block;
+    animation: spin 8s linear infinite;
+}
+#study_7 .spin::after {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: 45px;
+}
+#study_7 .spinner {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    position: relative;
+    margin: 50px;
+    display: inline-block;
+    animation: spin 8s linear infinite;
+}
+#study_7 .spinner::before {
+    content: "";
+    height: 30px;
+    width: 30px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+}
+#study_7 .spinner::after {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

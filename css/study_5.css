@@ -1,0 +1,30 @@
+
+/* STUDY 5 - Keyframes */
+#study_5 {
+    padding: 20px;
+    height: 100vh;
+}
+#study_5:hover {
+    animation: colorExpand 5s normal;
+}
+
+@keyframes colorExpand {
+    0% {
+        background-color: transparent;
+    }
+    10% {
+        background-color: #0d3766;
+    }
+    20% {
+        background-color: #0283fc;
+    }
+    50% {
+        background-color: chartreuse;
+    }
+    80% {
+        background-color: #333333;
+    }
+    100% {
+        background-color: goldenrod;
+    }
+}

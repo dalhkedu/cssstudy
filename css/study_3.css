@@ -1,0 +1,21 @@
+/* STUDY 3 - Progress Bar */
+#study_3 {
+    background-color: crimson;
+    padding: 20px;
+    height: 100vh;
+}
+#study_3 .wrapper {
+    border: 2px solid #000000;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+#study_3 .progress_bar {
+    background-color: green;
+    width: 0%;
+    height: 100%;
+    transition: width 10s ease-in;
+}
+#study_3 .wrapper:hover .progress_bar {
+    width: 99%;
+}

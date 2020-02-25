@@ -1,0 +1,25 @@
+
+/* STUDY 1 - Transactions */
+#study_1 {
+    background-color: #0283fc;
+    padding: 20px;
+    height: 100vh;
+}
+#study_1 .container {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    border: 20px solid #000000;
+    background-color: #ffffff;
+}
+#study_1 .container .box {
+    height: 100%;
+    background-color: #aaaaaa;
+    transform-origin: bottom right;
+    transition: transform 0.5s;
+    pointer-events: none;
+}
+#study_1 .container:hover .box {
+    transform: translateX(1000px) rotate(360deg);
+    border-radius: 100px;
+}
